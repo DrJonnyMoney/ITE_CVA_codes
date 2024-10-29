@@ -1,5 +1,5 @@
 from gpiozero import LED, Button
-from time import sleep
+import time
 import threading
 
 def listen_for_keypress():
@@ -18,7 +18,7 @@ keypress_thread.start()
 
 while keypress_thread.is_alive():
     led.on()
-    sleep(3)
+    time.sleep(3)
 
 print("Powering Down!")
 led.off()
