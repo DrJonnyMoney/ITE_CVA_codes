@@ -13,8 +13,14 @@ ncnn_model = YOLO("yolov8n_ncnn_model")
 # Run inference
 results = ncnn_model("bus.jpg")
 
-annotated_frame = results[0].plot()
+# Visualize the results on the image
+annotated_image = results[0].plot()
 
-cv2.imshow("Restuls", annotated_frame)
+# Display the resulting image
+cv2.imshow("Restuls", annotated_image)
+
+# Quit on key press
 cv2.waitKey(0)
+
+# Close windows
 cv2.destroyAllWindows()
