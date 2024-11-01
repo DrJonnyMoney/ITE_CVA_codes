@@ -4,3 +4,34 @@
 * When connecting the components to GPIO, please refer to the wiring diagram below:
 
 ![circsdfsuit](https://github.com/user-attachments/assets/0527fdda-63a7-4880-b66f-16abd54f72dc)
+
+
+# Setting up YOLO on your Raspberry Pi 5
+
+### 1. Prepare Your Raspberry Pi
+
+Start with a fresh Raspberry Pi installation and run the following commands to install the required dependencies:
+
+```bash
+sudo apt install python3-opencv
+sudo apt install libhdf5-dev
+```
+
+### 2. Set Up the Virtual Environment  
+
+Create and activate a virtual environment to isolate your project dependencies:  
+
+```bash
+python3 -m venv --system-site-packages yolo_project
+source yolo_project/bin/activate
+```
+
+### 3. Install Python Packages  
+
+With your virtual environment activated, update pip and install the necessary YOLO packages:
+
+```bash
+pip install --upgrade pip
+pip install ultralytics[export]
+pip install ncnn
+```
