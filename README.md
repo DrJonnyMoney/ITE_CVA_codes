@@ -8,7 +8,14 @@
 
 # Setting up YOLO on your Raspberry Pi 5
 
-### 1. Prepare Your Raspberry Pi
+### 1. Update and Upgrade Raspberry Pi OS
+
+```bash
+sudo apt update
+sudo apt full-upgrade
+```
+
+### 2. Prepare Your Raspberry Pi
 
 Start with a fresh Raspberry Pi installation and run the following commands to install the required dependencies:
 
@@ -17,7 +24,7 @@ sudo apt install python3-opencv
 sudo apt install libhdf5-dev
 ```
 
-### 2. Set Up the Virtual Environment  
+### 3. Set Up the Virtual Environment  
 
 Create and activate a virtual environment to isolate your project dependencies:  
 
@@ -26,7 +33,7 @@ python3 -m venv --system-site-packages yolo_project
 source yolo_project/bin/activate
 ```
 
-### 3. Install Python Packages  
+### 4. Install Python Packages  
 
 With your virtual environment activated, update pip and install the necessary YOLO packages:
 
