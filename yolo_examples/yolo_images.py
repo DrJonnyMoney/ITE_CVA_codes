@@ -11,7 +11,7 @@ model.export(format="ncnn")  # creates 'yolo11n_ncnn_model'
 ncnn_model = YOLO("yolov8n_ncnn_model")
 
 # Run inference
-results = ncnn_model("bus.jpg")
+results = ncnn_model(""https://ultralytics.com/images/bus.jpg"")
 
 # Visualize the results on the image
 annotated_image = results[0].plot()
