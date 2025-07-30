@@ -39,6 +39,6 @@ With your virtual environment activated, update pip and install the necessary YO
 
 ```bash
 pip install --upgrade pip
-pip install ultralytics[export]
+pip install ultralytics[export] --use-deprecated=legacy-resolver
 pip install ncnn
 ```
