@@ -8,7 +8,7 @@ picam2 = Picamera2()
 camera_config = picam2.create_still_configuration(main={"size": (1640,1232)},transform=Transform(vflip=True,hflip=True))
 picam2.configure(camera_config)
 picam2.start()
-
+picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
 # Load the YOLO11 model
 model = YOLO("yolov8n_ncnn_model")
 
